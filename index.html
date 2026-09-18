@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>د. منى عبد المقصود | نساء وتوليد وعقم وتجميل نسائي</title>
+<meta name="description" content="د. منى عبد المقصود — استشاري النساء والتوليد والعقم والحقن المجهري والتجميل النسائي. متابعة الحمل، السونار رباعي الأبعاد، صحة المرأة والتجميل النسائي.">
+<meta name="theme-color" content="#f8eee9">
+
+<!-- Replace G-XXXXXXXXXX with the real GA4 Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XXXXXXXXXX');
+</script>
+
+<style>
+:root{
+  --green:#78998a;
+  --green-dark:#557867;
+  --green-pale:#edf4ef;
+  --pink:#f3deda;
+  --pink-pale:#fbf3f0;
+  --rose:#c78f8c;
+  --cream:#fffdfb;
+  --ink:#35423c;
+  --muted:#748078;
+  --white:#fff;
+  --gold:#c9aa7a;
+  --line:rgba(53,66,60,.09);
+  --shadow:0 18px 50px rgba(88,103,94,.09);
+  --radius:26px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--cream);
+  font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.65;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+/* Language visibility — deliberately simple so EN switch works reliably */
+.en{display:none!important}
+body.english .ar{display:none!important}
+body.english .en{display:inline!important}
+body.english .en.block{display:block!important}
+body.english .en.flex{display:flex!important}
+body.english{direction:ltr}
+body.english .rtl-text{text-align:left}
+body.english .hero-copy,
+body.english .nav,
+body.english .section-title,
+body.english .contact-copy{direction:ltr}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,253,251,.91);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-dot{
+  width:34px;height:34px;border-radius:50%;
+  background:linear-gradient(145deg,var(--green),#a9c0b4);
+  color:white;display:grid;place-items:center;font-size:15px;
+}
+.nav-links{display:flex;gap:24px;color:var(--muted);font-size:13px}
+.nav-links a:hover{color:var(--green-dark)}
+.actions{display:flex;gap:8px;align-items:center}
+.lang{
+  border:1px solid var(--line);background:white;color:var(--green-dark);
+  border-radius:999px;padding:8px 13px;cursor:pointer;font-weight:700;
+}
+.top-book{
+  border:0;background:var(--green);color:#fff;border-radius:999px;
+  padding:10px 17px;font-weight:800;cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  padding:58px 0 52px;
+  background:
+    radial-gradient(circle at 7% 15%,rgba(243,222,218,.75),transparent 28%),
+    radial-gradient(circle at 93% 20%,rgba(237,244,239,.95),transparent 30%),
+    linear-gradient(135deg,#fffdfb,#f7f5f0);
+}
+.hero:after{
+  content:"";position:absolute;width:390px;height:390px;
+  border:1px solid rgba(120,153,138,.13);border-radius:50%;
+  right:-180px;bottom:-205px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.12fr .88fr;gap:64px;
+  align-items:center;direction:ltr;
+}
+.hero-copy{direction:rtl}
+.eyebrow{
+  display:inline-block;background:var(--pink-pale);color:var(--rose);
+  border:1px solid rgba(199,143,140,.13);border-radius:999px;
+  padding:7px 13px;font-size:12px;font-weight:800;margin-bottom:17px;
+}
+h1{
+  margin:0 0 17px;font-size:clamp(39px,5vw,61px);
+  line-height:1.1;letter-spacing:-1.5px;font-weight:800;
+}
+h1 em{font-style:normal;color:var(--green-dark)}
+.hero-sub{max-width:650px;color:var(--muted);font-size:17px;margin:0 0 25px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  min-height:46px;padding:0 19px;border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  font-weight:800;border:1px solid transparent;cursor:pointer;
+}
+.primary{background:var(--green);color:white;box-shadow:0 12px 26px rgba(120,153,138,.19)}
+.secondary{background:white;color:var(--green-dark);border-color:var(--line)}
+
+/* Smaller, cleaner portrait */
+.photo-area{display:flex;justify-content:center;direction:rtl}
+.photo-card{
+  width:min(345px,100%);background:white;padding:10px;
+  border-radius:30px;box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.photo-card img{
+  display:block;width:100%;height:365px;object-fit:cover;
+  object-position:center top;border-radius:23px;
+}
+.photo-info{
+  padding:13px 7px 5px;display:flex;justify-content:space-between;
+  align-items:center;gap:10px;
+}
+.photo-info strong{font-size:16px}
+.photo-info small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.hours{
+  background:var(--green-pale);color:var(--green-dark);
+  border-radius:13px;padding:7px 9px;text-align:center;
+  font-size:10px;font-weight:800;white-space:nowrap;
+}
+
+/* Trust */
+.trust{background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 0}
+.trust-item{text-align:center;color:var(--muted);font-size:12px}
+.trust-item b{display:block;color:var(--green-dark);font-size:14px;margin-bottom:2px}
+
+/* Sections */
+section{padding:72px 0}
+.section-title{text-align:center;max-width:700px;margin:0 auto 34px}
+.kicker{color:var(--rose);font-size:11px;font-weight:900;letter-spacing:1.2px}
+h2{font-size:clamp(28px,4vw,41px);line-height:1.2;margin:7px 0 10px}
+.section-title p{color:var(--muted);margin:0;font-size:14px}
+
+/* Services */
+.services{background:#fff}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service{
+  padding:22px;border:1px solid var(--line);border-radius:21px;
+  background:linear-gradient(145deg,#fff,#fffaf8);
+  min-height:175px;transition:.2s;
+}
+.service:nth-child(2n){background:linear-gradient(145deg,#fff,#f8fcf9)}
+.service:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.icon{
+  width:42px;height:42px;border-radius:14px;
+  display:grid;place-items:center;margin-bottom:14px;
+  background:var(--pink-pale);color:var(--rose);font-weight:900;
+}
+.service:nth-child(2n) .icon{background:var(--green-pale);color:var(--green-dark)}
+.service h3{margin:0 0 5px;font-size:17px}
+.service p{margin:0;color:var(--muted);font-size:13px}
+
+/* Two-column women's health */
+.health{
+  background:linear-gradient(180deg,#f8f3f0,#f5faf6);
+}
+.health-grid{display:grid;grid-template-columns:.84fr 1.16fr;gap:54px;align-items:center}
+.abstract{
+  min-height:370px;border-radius:31px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 30%,rgba(243,222,218,.95),transparent 24%),
+    radial-gradient(circle at 72% 68%,rgba(177,207,191,.70),transparent 30%),
+    linear-gradient(145deg,#fff9f6,#eef6f0);
+  border:1px solid var(--line);
+}
+.abstract .ring{
+  position:absolute;width:230px;height:230px;border-radius:50%;
+  border:1px solid rgba(120,153,138,.20);left:50%;top:50%;
+  transform:translate(-50%,-50%);
+}
+.abstract .heart{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-54%);
+  width:112px;height:112px;border-radius:50%;background:rgba(255,255,255,.78);
+  display:grid;place-items:center;font-size:42px;color:var(--rose);
+  box-shadow:0 20px 45px rgba(95,112,102,.12);
+}
+.floating{
+  position:absolute;background:rgba(255,255,255,.88);border:1px solid var(--line);
+  border-radius:17px;padding:12px 15px;box-shadow:0 13px 30px rgba(80,95,86,.08);
+}
+.floating.one{top:34px;right:27px}
+.floating.two{bottom:34px;left:27px}
+.floating b{display:block;color:var(--green-dark);font-size:20px;line-height:1.1}
+.floating span{font-size:10px;color:var(--muted)}
+.rtl-text h2{text-align:right}
+.rtl-text p{color:var(--muted);font-size:15px}
+.list{display:grid;gap:11px;margin-top:21px}
+.list-item{display:flex;gap:10px;align-items:flex-start;font-size:13px}
+.check{width:24px;height:24px;flex:0 0 24px;border-radius:50%;background:var(--green-pale);color:var(--green-dark);display:grid;place-items:center;font-size:12px;font-weight:900}
+
+/* Cosmetic */
+.cosmetic{background:white}
+.cosmetic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.cos-card{
+  min-height:145px;border-radius:20px;padding:20px;
+  border:1px solid var(--line);background:var(--pink-pale);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.cos-card:nth-child(2n){background:var(--green-pale)}
+.cos-card .mark{font-size:22px;color:var(--rose)}
+.cos-card:nth-child(2n) .mark{color:var(--green-dark)}
+.cos-card b{font-size:15px}
+.cos-card span{font-size:11px;color:var(--muted)}
+
+/* Contact */
+.contact{background:#fbf8f4}
+.contact-card{
+  display:grid;grid-template-columns:1fr .78fr;
+  overflow:hidden;border-radius:30px;background:#526d60;color:white;
+  box-shadow:var(--shadow);
+}
+.contact-copy{padding:38px;direction:rtl}
+.contact-copy .kicker{color:#e7cfc1}
+.contact-copy h2{margin-top:5px}
+.contact-copy p{color:rgba(255,255,255,.73);font-size:13px}
+.info{display:grid;gap:13px;margin:22px 0}
+.info-row{display:flex;gap:10px;align-items:flex-start;font-size:13px}
+.info-row .ico{
+  width:31px;height:31px;flex:0 0 31px;border-radius:10px;
+  background:rgba(255,255,255,.10);display:grid;place-items:center;
+}
+.info-row small{display:block;color:rgba(255,255,255,.55);font-size:10px;margin-bottom:1px}
+.map{
+  min-height:320px;display:grid;place-items:center;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.13),transparent 20%),
+    repeating-linear-gradient(45deg,rgba(255,255,255,.055) 0 1px,transparent 1px 25px);
+}
+.pin{
+  width:78px;height:78px;border-radius:50%;background:white;color:var(--green-dark);
+  display:grid;place-items:center;font-size:30px;box-shadow:0 20px 45px rgba(0,0,0,.17);
+}
+
+/* Footer + mobile */
+footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--line)}
+.footer{display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:11px}
+.mobile-bar{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);padding:8px;grid-template-columns:1fr 1fr 1fr;gap:7px;
+}
+.mobile-bar a,.mobile-bar button{
+  min-height:43px;border:0;border-radius:12px;font-size:11px;font-weight:800;display:grid;place-items:center;
+}
+.mwa{background:var(--green-pale);color:var(--green-dark)}
+.mbook{background:var(--green);color:white}
+.mcall{background:var(--pink-pale);color:#896260}
+
+/* Call modal */
+.backdrop{
+  display:none;position:fixed;inset:0;z-index:200;background:rgba(40,50,45,.52);
+  backdrop-filter:blur(5px);align-items:center;justify-content:center;padding:18px;
+}
+.modal{width:min(410px,100%);background:white;border-radius:24px;padding:26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.23)}
+.modal h3{margin:0 0 6px;font-size:21px}
+.modal p{margin:0 0 16px;color:var(--muted);font-size:13px}
+.number{font-size:20px;font-weight:900;color:var(--green-dark);direction:ltr;margin-bottom:19px}
+.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.modal-actions button{border:0;border-radius:12px;padding:11px;cursor:pointer;font-weight:800}
+.cancel{background:#f1f2f0;color:var(--ink)}
+.confirm{background:var(--green);color:white}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero-grid,.health-grid,.contact-card{grid-template-columns:1fr}
+  .hero-grid{gap:38px}
+  .photo-area{order:2}
+  .service-grid{grid-template-columns:1fr 1fr}
+  .cosmetic-grid{grid-template-columns:1fr 1fr}
+  .map{min-height:230px}
+}
+@media(max-width:600px){
+  .nav{height:65px}
+  .top-book{display:none}
+  .brand{font-size:12px}
+  .hero{padding:38px 0 44px}
+  h1{font-size:38px}
+  .hero-sub{font-size:15px}
+  .hero-actions .btn{width:100%}
+  .photo-card{width:min(290px,100%)}
+  .photo-card img{height:310px}
+  section{padding:58px 0}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .service-grid,.cosmetic-grid{grid-template-columns:1fr}
+  .abstract{min-height:300px}
+  .contact-copy{padding:29px 23px}
+  .footer{flex-direction:column;text-align:center}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:78px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand-dot">M</span>
+      <span class="ar">د. منى عبد المقصود</span>
+      <span class="en">Dr. Mona Abdelmaksoud</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+      <a href="#health"><span class="ar">صحة المرأة</span><span class="en">Women's Health</span></a>
+      <a href="#cosmetic"><span class="ar">التجميل النسائي</span><span class="en">Cosmetic Gynecology</span></a>
+      <a href="#contact"><span class="ar">المواعيد والموقع</span><span class="en">Hours & Location</span></a>
+    </nav>
+    <div class="actions">
+      <button class="lang" id="lang" onclick="toggleLang()">EN</button>
+      <a class="top-book" href="https://wa.me/201220446628?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
+        <span class="ar">احجزي موعدك</span><span class="en">Book Appointment</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="ar">نساء وتوليد • حقن مجهري • صحة وتجميل المرأة</span><span class="en">Obstetrics • IVF • Women's Health & Cosmetic Gynecology</span></div>
+      <h1>
+        <span class="ar">رعاية متخصصة<br>لـ <em>كل مرحلة</em> من رحلتك</span>
+        <span class="en">Specialized care<br>for <em>every stage</em> of your journey</span>
+      </h1>
+      <p class="hero-sub">
+        <span class="ar">د. منى عبد المقصود — استشاري النساء والتوليد والعقم والحقن المجهري والتجميل النسائي، مع رعاية تجمع بين الخبرة الطبية والتقنيات الحديثة.</span>
+        <span class="en">Dr. Mona Abdelmaksoud — Consultant in Obstetrics, Gynecology, Infertility, IVF and Cosmetic Gynecology, combining medical care with modern techniques.</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="https://wa.me/201220446628?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">💬 <span class="ar">واتساب وحجز</span><span class="en">WhatsApp & Booking</span></a>
+        <button class="btn secondary" onclick="openCall()">☎ <span class="ar">اتصال هاتفي</span><span class="en">Call</span></button>
+        <a class="btn secondary" href="https://maps.app.goo.gl/JJFDAgx8AeKCnCH46" target="_blank" rel="noopener">⌖ <span class="ar">الموقع</span><span class="en">Location</span></a>
+      </div>
+    </div>
+
+    <div class="photo-area">
+      <div class="photo-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXTM5kE8Doxi8a6yYYgj1dYhhWKwO-A8eKpSMxEFxPXpRVjQEFqdj1dd0&s=10" alt="د. منى عبد المقصود">
+        <div class="photo-info">
+          <div>
+            <strong><span class="ar">د. منى عبد المقصود</span><span class="en">Dr. Mona Abdelmaksoud</span></strong>
+            <small><span class="ar">استشاري نساء وتوليد وعقم وتجميل نسائي</span><span class="en">Consultant Obstetrics, Gynecology, Infertility & Cosmetic Gynecology</span></small>
+          </div>
+          <div class="hours"><span class="ar">أحد • ثلاثاء • خميس<br>5:30–9:30 م</span><span class="en">Sun • Tue • Thu<br>5:30–9:30 PM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><b>4D</b><span class="ar">سونار رباعي الأبعاد</span><span class="en">4D Ultrasound</span></div>
+    <div class="trust-item"><b>IVF</b><span class="ar">الحقن المجهري والعقم</span><span class="en">IVF & Infertility</span></div>
+    <div class="trust-item"><b>♡</b><span class="ar">صحة المرأة</span><span class="en">Women's Health</span></div>
+    <div class="trust-item"><b>✦</b><span class="ar">تجميل نسائي</span><span class="en">Cosmetic Gynecology</span></div>
+  </div>
+</div>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker"><span class="ar">الخدمات</span><span class="en">SERVICES</span></div>
+      <h2><span class="ar">رعاية شاملة للمرأة</span><span class="en">Comprehensive women's care</span></h2>
+      <p><span class="ar">من متابعة الحمل والولادة إلى صحة المرأة والعقم والتجميل النسائي.</span><span class="en">From pregnancy and delivery care to women's health, infertility and cosmetic gynecology.</span></p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div class="icon">♡</div><h3><span class="ar">متابعة الحمل والولادة</span><span class="en">Pregnancy & Delivery</span></h3><p><span class="ar">متابعة الحمل والفحوصات والاستعداد للولادة الطبيعية أو القيصرية.</span><span class="en">Pregnancy follow-up, examinations and care for vaginal or caesarean delivery.</span></p></article>
+      <article class="service"><div class="icon">4D</div><h3><span class="ar">السونار رباعي الأبعاد</span><span class="en">4D Ultrasound</span></h3><p><span class="ar">فحوصات ومتابعة باستخدام أجهزة سونار رباعي الأبعاد حديثة.</span><span class="en">Examinations and follow-up using modern 4D ultrasound technology.</span></p></article>
+      <article class="service"><div class="icon">IVF</div><h3><span class="ar">الحقن المجهري والعقم</span><span class="en">IVF & Infertility</span></h3><p><span class="ar">استشارات متخصصة في تأخر الإنجاب والحقن المجهري.</span><span class="en">Specialized consultation for infertility and IVF.</span></p></article>
+      <article class="service"><div class="icon">◌</div><h3><span class="ar">اضطرابات الدورة</span><span class="en">Menstrual Disorders</span></h3><p><span class="ar">تقييم وعلاج اضطرابات الدورة والمشكلات النسائية الشائعة.</span><span class="en">Evaluation and management of menstrual and common gynecological concerns.</span></p></article>
+      <article class="service"><div class="icon">+</div><h3><span class="ar">الالتهابات المتكررة</span><span class="en">Recurrent Infections</span></h3><p><span class="ar">تقييم أسباب الالتهابات المهبلية المتكررة ووضع خطة مناسبة.</span><span class="en">Assessment and management of recurrent vaginal infections.</span></p></article>
+      <article class="service"><div class="icon">⌕</div><h3><span class="ar">الكشف المبكر والمتابعة</span><span class="en">Early Detection</span></h3><p><span class="ar">فحوصات نسائية ومتابعة للكشف المبكر عن المشكلات والأورام.</span><span class="en">Gynecological assessment and follow-up for early detection of conditions.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section id="health" class="health">
+  <div class="container health-grid">
+    <div class="abstract">
+      <div class="ring"></div><div class="heart">♡</div>
+      <div class="floating one"><b>4D</b><span><span class="ar">متابعة الحمل</span><span class="en">Pregnancy Care</span></span></div>
+      <div class="floating two"><b>IVF</b><span><span class="ar">رعاية الخصوبة</span><span class="en">Fertility Care</span></span></div>
+    </div>
+    <div class="rtl-text">
+      <div class="kicker"><span class="ar">صحة المرأة</span><span class="en">WOMEN'S HEALTH</span></div>
+      <h2><span class="ar">رعاية تهتم بالتفاصيل التي تهمك</span><span class="en">Care focused on what matters to you</span></h2>
+      <p><span class="ar">من الفحص النسائي ومشكلات الدورة إلى وسائل منع الحمل والجفاف المهبلي والسلس البولي وعلاج ومتابعة HPV، يتم تقييم الحالة ووضع الخطة المناسبة.</span><span class="en">From gynecological examinations and menstrual concerns to contraception, vaginal dryness, urinary incontinence and HPV treatment and follow-up, each case is assessed individually.</span></p>
+      <div class="list">
+        <div class="list-item"><div class="check">✓</div><span class="ar">فحص ومتابعة صحة المرأة</span><span class="en">Women's health examination and follow-up</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">وسائل منع الحمل والاستشارات النسائية</span><span class="en">Contraception and gynecological consultation</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">الجفاف المهبلي والسلس البولي</span><span class="en">Vaginal dryness and urinary incontinence</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">علاج ومتابعة حالات HPV</span><span class="en">HPV treatment and follow-up</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cosmetic" class="cosmetic">
+  <div class="container">
+    <div class="section-title">
+      <div class="kicker"><span class="ar">التجميل النسائي</span><span class="en">COSMETIC GYNECOLOGY</span></div>
+      <h2><span class="ar">صحة وتجميل المرأة بتقنيات متخصصة</span><span class="en">Specialized women's health & aesthetic care</span></h2>
+      <p><span class="ar">يتم اختيار الإجراء المناسب بعد التقييم الطبي للحالة.</span><span class="en">The appropriate treatment is selected following medical assessment.</span></p>
+    </div>
+    <div class="cosmetic-grid">
+      <div class="cos-card"><span class="mark">✦</span><b><span class="ar">الفيلر النسائي</span><span class="en">Female Filler</span></b><span><span class="ar">حقن تجميلية للمنطقة الحساسة</span><span class="en">Intimate-area aesthetic injections</span></span></div>
+      <div class="cos-card"><span class="mark">◌</span><b><span class="ar">الدهون الذاتية</span><span class="en">Autologous Fat</span></b><span><span class="ar">حسب التقييم الطبي</span><span class="en">Where clinically appropriate</span></span></div>
+      <div class="cos-card"><span class="mark">⌁</span><b><span class="ar">الليزر المهبلي</span><span class="en">Vaginal Laser</span></b><span><span class="ar">تقنيات ليزر متخصصة</span><span class="en">Specialized laser techniques</span></span></div>
+      <div class="cos-card"><span class="mark">◎</span><b>PRP</b><span><span class="ar">البلازما الغنية بالصفائح</span><span class="en">Platelet-rich plasma</span></span></div>
+      <div class="cos-card"><span class="mark">G</span><b>G-Shot</b><span><span class="ar">خدمة متخصصة بعد التقييم</span><span class="en">Following medical assessment</span></span></div>
+      <div class="cos-card"><span class="mark">O</span><b>O-Shot</b><span><span class="ar">خدمة متخصصة بعد التقييم</span><span class="en">Following medical assessment</span></span></div>
+      <div class="cos-card"><span class="mark">✧</span><b><span class="ar">الفراكشنال ليزر</span><span class="en">Fractional Laser</span></b><span><span class="ar">متاح بالعيادة</span><span class="en">Available at the clinic</span></span></div>
+      <div class="cos-card"><span class="mark">♡</span><b><span class="ar">صحة المنطقة الحساسة</span><span class="en">Intimate Wellness</span></b><span><span class="ar">الجفاف والاحتياجات التجميلية</span><span class="en">Dryness and aesthetic concerns</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-card">
+      <div class="contact-copy">
+        <div class="kicker"><span class="ar">المواعيد والموقع</span><span class="en">HOURS & LOCATION</span></div>
+        <h2><span class="ar">احجزي موعدك</span><span class="en">Book your appointment</span></h2>
+        <p><span class="ar">الأحد، الثلاثاء والخميس من 5:30 مساءً إلى 9:30 مساءً.</span><span class="en">Sunday, Tuesday and Thursday, 5:30 PM – 9:30 PM.</span></p>
+        <div class="info">
+          <div class="info-row"><div class="ico">⌖</div><div><small><span class="ar">العنوان</span><span class="en">Address</span></small>فوق بدل أحمد نبيل، خامس عمارة بعد معمل صحة و الفا، ٧ Ahmed El-Zomor، الحي العاشر، مدينة نصر، القاهرة</div></div>
+          <div class="info-row"><div class="ico">☎</div><div><small><span class="ar">الهاتف</span><span class="en">Phone</span></small><span dir="ltr">+20 12 20446628</span></div></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://wa.me/201220446628?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">💬 <span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
+          <button class="btn secondary" onclick="openCall()">☎ <span class="ar">اتصال</span><span class="en">Call</span></button>
+          <a class="btn secondary" href="https://maps.app.goo.gl/JJFDAgx8AeKCnCH46" target="_blank" rel="noopener">⌖ <span class="ar">فتح الخريطة</span><span class="en">Open Map</span></a>
+        </div>
+      </div>
+      <a class="map" href="https://maps.app.goo.gl/JJFDAgx8AeKCnCH46" target="_blank" rel="noopener" aria-label="Google Maps"><div class="pin">⌖</div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <span><span class="ar">د. منى عبد المقصود — نساء وتوليد وعقم وتجميل نسائي</span><span class="en">Dr. Mona Abdelmaksoud — Obstetrics, Gynecology, Infertility & Cosmetic Gynecology</span></span>
+    <span>© <span id="year"></span></span>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="mwa" href="https://wa.me/201220446628?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">💬 <span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
+  <a class="mbook" href="#contact">♡ <span class="ar">احجزي</span><span class="en">Book</span></a>
+  <button class="mcall" onclick="openCall()">☎ <span class="ar">اتصال</span><span class="en">Call</span></button>
+</div>
+
+<div class="backdrop" id="callModal" onclick="closeCall(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h3><span class="ar">اتصال هاتفي</span><span class="en">Phone Call</span></h3>
+    <p><span class="ar">هل تريدين الاتصال بالرقم التالي؟</span><span class="en">Would you like to call this number?</span></p>
+    <div class="number">+20 12 20446628</div>
+    <div class="modal-actions">
+      <button class="cancel" onclick="closeCall()"> <span class="ar">إلغاء</span><span class="en">Cancel</span></button>
+      <button class="confirm" onclick="confirmCall()"> <span class="ar">نعم، اتصل</span><span class="en">Yes, Call</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+let english=false;
+
+function toggleLang(){
+  english=!english;
+  document.body.classList.toggle('english',english);
+  document.documentElement.lang=english?'en':'ar';
+  document.documentElement.dir=english?'ltr':'rtl';
+  document.getElementById('lang').textContent=english?'عربي':'EN';
+}
+
+function openCall(){
+  document.getElementById('callModal').style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeCall(e){
+  if(!e || e.target.id==='callModal'){
+    document.getElementById('callModal').style.display='none';
+    document.body.style.overflow='';
+  }
+}
+function confirmCall(){
+  if(typeof gtag==='function'){
+    gtag('event','phone_call_click',{event_category:'engagement',event_label:'Dr Mona'});
+  }
+  window.location.href='tel:+201220446628';
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
+  a.addEventListener('click',()=>typeof gtag==='function'&&gtag('event','whatsapp_click',{event_category:'engagement',event_label:'Dr Mona'}));
+});
+document.querySelectorAll('a[href*="maps.app.goo.gl"]').forEach(a=>{
+  a.addEventListener('click',()=>typeof gtag==='function'&&gtag('event','map_click',{event_category:'engagement',event_label:'Dr Mona'}));
+});
+</script>
+</body>
+</html>
