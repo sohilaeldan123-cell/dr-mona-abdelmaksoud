@@ -312,6 +312,83 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
   .mobile-bar{display:grid}
   footer{padding-bottom:78px}
 }
+
+/* Extra mobile optimization: compact, conversion-first layout */
+@media(max-width:600px){
+  .container{width:min(94%,420px)}
+  header{position:sticky}
+  .nav{height:58px}
+  .brand{font-size:11px;gap:7px}
+  .brand-dot{width:30px;height:30px;font-size:13px}
+  .lang{padding:6px 10px;font-size:11px}
+
+  .hero{padding:20px 0 18px}
+  .hero-grid{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .hero-copy{order:1;text-align:center}
+  .photo-area{order:2}
+  .eyebrow{font-size:10px;padding:5px 10px;margin-bottom:8px}
+  h1{font-size:30px;line-height:1.08;letter-spacing:-.7px;margin-bottom:9px}
+  .hero-sub{font-size:12.5px;line-height:1.55;margin:0 auto 12px;max-width:390px}
+  .hero-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .hero-actions .btn{width:auto;min-height:40px;padding:0 6px;font-size:10.5px}
+
+  .photo-card{width:100%;max-width:360px;margin:auto;padding:7px;border-radius:20px;display:flex;align-items:center;gap:9px}
+  .photo-card img{width:108px;height:108px;flex:0 0 108px;border-radius:15px;object-fit:cover}
+  .photo-info{padding:4px 3px;display:block;flex:1;text-align:right}
+  body.english .photo-info{text-align:left}
+  .photo-info strong{font-size:13px}
+  .photo-info small{font-size:9.5px;line-height:1.35;margin-top:3px}
+  .hours{display:inline-block;margin-top:7px;padding:5px 7px;font-size:8.5px;border-radius:9px}
+
+  .trust-grid{grid-template-columns:repeat(4,1fr);gap:3px;padding:9px 0}
+  .trust-item{font-size:8.5px;line-height:1.25;padding:0 2px}
+  .trust-item b{font-size:12px;margin-bottom:1px}
+
+  section{padding:30px 0}
+  .section-title{margin-bottom:15px}
+  .kicker{font-size:9px;letter-spacing:.8px}
+  h2{font-size:23px;margin:4px 0 6px;line-height:1.15}
+  .section-title p{font-size:10.5px;line-height:1.45}
+
+  .service-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .service{min-height:0;height:116px;padding:11px;border-radius:15px}
+  .icon{width:29px;height:29px;border-radius:9px;margin-bottom:6px;font-size:10px}
+  .service h3{font-size:12px;line-height:1.2;margin-bottom:3px}
+  .service p{font-size:9.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+  .health-grid{display:block}
+  .abstract{display:none}
+  .rtl-text h2{font-size:24px}
+  .rtl-text p{font-size:11px;line-height:1.55;margin:7px 0 0}
+  .list{grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
+  .list-item{gap:6px;font-size:9.5px;line-height:1.35}
+  .check{width:19px;height:19px;flex:0 0 19px;font-size:9px}
+
+  .cosmetic-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .cos-card{min-height:0;height:94px;border-radius:15px;padding:11px}
+  .cos-card .mark{font-size:16px}
+  .cos-card b{font-size:11px;line-height:1.15}
+  .cos-card span{font-size:8.5px;line-height:1.25}
+
+  .contact-card{display:block;border-radius:20px}
+  .contact-copy{padding:20px 16px}
+  .contact-copy h2{font-size:24px}
+  .contact-copy p{font-size:10px;line-height:1.45;margin:5px 0}
+  .info{gap:7px;margin:11px 0}
+  .info-row{gap:7px;font-size:9.5px;line-height:1.35}
+  .info-row .ico{width:25px;height:25px;flex:0 0 25px;border-radius:8px;font-size:10px}
+  .info-row small{font-size:8px}
+  .contact-copy .hero-actions{grid-template-columns:repeat(3,1fr);gap:6px}
+  .contact-copy .hero-actions .btn{min-height:36px;font-size:9.5px}
+  .map{min-height:105px;height:105px}
+  .pin{width:48px;height:48px;font-size:20px}
+
+  footer{padding:15px 0 70px}
+  .footer{font-size:8.5px;gap:5px}
+  .mobile-bar{padding:6px;gap:5px}
+  .mobile-bar a,.mobile-bar button{min-height:40px;border-radius:10px;font-size:10px}
+}
+
 </style>
 </head>
 
