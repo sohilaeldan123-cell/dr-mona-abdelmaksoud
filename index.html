@@ -270,6 +270,68 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
 .mbook{background:var(--green);color:white}
 .mcall{background:var(--pink-pale);color:#896260}
 
+
+/* Always-visible floating contact rail */
+.floating-cta{
+  position:fixed;right:18px;bottom:24px;top:auto;transform:none;
+  z-index:90;display:flex;flex-direction:column;gap:8px;direction:rtl;
+}
+.float-btn{
+  min-width:132px;height:43px;padding:0 13px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  border:1px solid rgba(53,66,60,.08);font-size:11px;font-weight:900;
+  box-shadow:0 10px 28px rgba(53,66,60,.12);backdrop-filter:blur(10px);
+}
+.float-book{background:var(--green);color:#fff}
+.float-wa{background:#edf7f0;color:var(--green-dark)}
+.float-call{background:#fbf0ee;color:#896260}
+.floating-cta.at-end{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:opacity .22s ease,visibility .22s ease,transform .22s ease}
+.floating-cta{transition:opacity .22s ease,visibility .22s ease,transform .22s ease}
+
+/* Compact information categories */
+.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;align-items:start}
+.category-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(88,103,94,.05)}
+.category-head{padding:19px 18px 15px;background:linear-gradient(145deg,#fff8f6,#fff);border-bottom:1px solid var(--line)}
+.category-card:nth-child(2) .category-head{background:linear-gradient(145deg,#f5faf7,#fff)}
+.category-card:nth-child(3) .category-head{background:linear-gradient(145deg,#fff6f2,#fff)}
+.category-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--pink-pale);color:var(--rose);font-weight:900;margin-bottom:9px}
+.category-card:nth-child(2) .category-icon{background:var(--green-pale);color:var(--green-dark)}
+.category-head h3{margin:0;font-size:18px}
+.category-head p{margin:3px 0 0;color:var(--muted);font-size:11px}
+.category-list{list-style:none;margin:0;padding:14px 17px 17px;display:grid;gap:9px}
+.category-list li{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.45}
+.category-list li::before{content:'✓';width:18px;height:18px;flex:0 0 18px;border-radius:50%;display:grid;place-items:center;background:var(--green-pale);color:var(--green-dark);font-size:9px;font-weight:900;margin-top:1px}
+.category-card:nth-child(1) .category-list li::before,.category-card:nth-child(3) .category-list li::before{background:var(--pink-pale);color:var(--rose)}
+.category-list .en{display:none}
+.category-card details summary{list-style:none;cursor:pointer}
+.category-card details summary::-webkit-details-marker{display:none}
+.category-card details summary .summary-arrow{display:none}
+.category-head .more-hint{display:flex;align-items:center;gap:5px;margin-top:7px;color:var(--green-dark);font-size:10px;font-weight:800}
+.category-head .more-hint::after{content:"⌄";font-size:13px}
+.category-card details[open] .more-hint{color:var(--rose)}
+.category-card details[open] .more-hint::after{content:"⌃"}
+
+@media(max-width:900px){
+  .floating-cta{right:12px;top:auto;bottom:84px;transform:none;gap:6px}
+  .float-btn{min-width:44px;width:44px;height:44px;padding:0;border-radius:50%;font-size:16px}
+  .float-btn span{display:none}
+  .category-grid{grid-template-columns:1fr;gap:8px}
+  .category-card{border-radius:16px}
+  .category-card details:not([open]) .category-list{display:none}
+  .category-head{padding:12px 13px}
+  .category-icon{width:30px;height:30px;border-radius:9px;margin-bottom:5px;font-size:12px}
+  .category-head h3{font-size:14px}
+  .category-head p{font-size:9px}
+  .category-head .more-hint{font-size:8.5px;margin-top:4px}
+  .category-head{display:flex;align-items:center;gap:9px}
+  .category-head .head-copy{flex:1}
+  .category-card details summary .summary-arrow{display:block;font-size:15px;color:var(--green-dark);transition:.2s}
+  .category-card details[open] summary .summary-arrow{transform:rotate(180deg)}
+  .category-list{padding:10px 13px 13px;gap:7px;grid-template-columns:1fr 1fr}
+  .category-list li{font-size:9.5px;line-height:1.4;gap:6px}
+  .category-list li::before{width:17px;height:17px;flex:0 0 17px;font-size:8px}
+}
+
 /* Call modal */
 .backdrop{
   display:none;position:fixed;inset:0;z-index:200;background:rgba(40,50,45,.52);
@@ -425,7 +487,7 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
         <span class="en">Specialized care<br>for <em>every stage</em> of your journey</span>
       </h1>
       <p class="hero-sub">
-        <span class="ar">د. منى عبد المقصود — استشاري النساء والتوليد والعقم والحقن المجهري والتجميل النسائي، مع رعاية تجمع بين الخبرة الطبية والتقنيات الحديثة.</span>
+        <span class="ar">د. منى عبد المقصود — استشاري النساء والتوليد والعقم والحقن المجهري والتجميل النسائي، مع رعاية متخصصة لصحة المرأة.</span>
         <span class="en">Dr. Mona Abdelmaksoud — Consultant in Obstetrics, Gynecology, Infertility, IVF and Cosmetic Gynecology, combining medical care with modern techniques.</span>
       </p>
       <div class="hero-actions">
@@ -437,7 +499,8 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
 
     <div class="photo-area">
       <div class="photo-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXTM5kE8Doxi8a6yYYgj1dYhhWKwO-A8eKpSMxEFxPXpRVjQEFqdj1dd0&s=10" alt="د. منى عبد المقصود">
+        <!-- REPLACE_DOCTOR_PHOTO_URL_WITH_NEW_IMAGE -->
+        <img src="doctor-mona.png" alt="د. منى عبد المقصود">
         <div class="photo-info">
           <div>
             <strong><span class="ar">د. منى عبد المقصود</span><span class="en">Dr. Mona Abdelmaksoud</span></strong>
@@ -462,17 +525,75 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
 <section id="services" class="services">
   <div class="container">
     <div class="section-title">
-      <div class="kicker"><span class="ar">الخدمات</span><span class="en">SERVICES</span></div>
-      <h2><span class="ar">رعاية شاملة للمرأة</span><span class="en">Comprehensive women's care</span></h2>
-      <p><span class="ar">من متابعة الحمل والولادة إلى صحة المرأة والعقم والتجميل النسائي.</span><span class="en">From pregnancy and delivery care to women's health, infertility and cosmetic gynecology.</span></p>
+      <div class="kicker"><span class="ar">متخصصون في</span><span class="en">SPECIALIZED CARE</span></div>
+      <h2><span class="ar">رعاية متخصصة للمرأة في كل مرحلة</span><span class="en">Specialized care for every stage</span></h2>
+      <p><span class="ar">خدمات متكاملة في النساء والتوليد والعقم والتجميل النسائي، مع اختيار الخطة المناسبة بعد التقييم الطبي.</span><span class="en">Comprehensive obstetrics, gynecology, fertility and cosmetic gynecology care, with treatment selected after medical assessment.</span></p>
     </div>
-    <div class="service-grid">
-      <article class="service"><div class="icon">♡</div><h3><span class="ar">متابعة الحمل والولادة</span><span class="en">Pregnancy & Delivery</span></h3><p><span class="ar">متابعة الحمل والفحوصات والاستعداد للولادة الطبيعية أو القيصرية.</span><span class="en">Pregnancy follow-up, examinations and care for vaginal or caesarean delivery.</span></p></article>
-      <article class="service"><div class="icon">4D</div><h3><span class="ar">السونار رباعي الأبعاد</span><span class="en">4D Ultrasound</span></h3><p><span class="ar">فحوصات ومتابعة باستخدام أجهزة سونار رباعي الأبعاد حديثة.</span><span class="en">Examinations and follow-up using modern 4D ultrasound technology.</span></p></article>
-      <article class="service"><div class="icon">IVF</div><h3><span class="ar">الحقن المجهري والعقم</span><span class="en">IVF & Infertility</span></h3><p><span class="ar">استشارات متخصصة في تأخر الإنجاب والحقن المجهري.</span><span class="en">Specialized consultation for infertility and IVF.</span></p></article>
-      <article class="service"><div class="icon">◌</div><h3><span class="ar">اضطرابات الدورة</span><span class="en">Menstrual Disorders</span></h3><p><span class="ar">تقييم وعلاج اضطرابات الدورة والمشكلات النسائية الشائعة.</span><span class="en">Evaluation and management of menstrual and common gynecological concerns.</span></p></article>
-      <article class="service"><div class="icon">+</div><h3><span class="ar">الالتهابات المتكررة</span><span class="en">Recurrent Infections</span></h3><p><span class="ar">تقييم أسباب الالتهابات المهبلية المتكررة ووضع خطة مناسبة.</span><span class="en">Assessment and management of recurrent vaginal infections.</span></p></article>
-      <article class="service"><div class="icon">⌕</div><h3><span class="ar">الكشف المبكر والمتابعة</span><span class="en">Early Detection</span></h3><p><span class="ar">فحوصات نسائية ومتابعة للكشف المبكر عن المشكلات والأورام.</span><span class="en">Gynecological assessment and follow-up for early detection of conditions.</span></p></article>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <details open>
+          <summary>
+            <div class="category-head">
+              <div class="category-icon">♡</div>
+              <div class="head-copy"><h3><span class="ar">الحمل والولادة</span><span class="en">Pregnancy & Delivery</span></h3><p><span class="ar">متابعة من بداية الحمل حتى ما بعد الولادة</span><span class="en">From early pregnancy through postpartum care</span></p><div class="more-hint"><span class="ar">اضغطي لمعرفة المزيد</span><span class="en">Tap to view more</span></div></div>
+              <span class="summary-arrow">⌄</span>
+            </div>
+          </summary>
+          <ul class="category-list">
+            <li><span class="ar">متابعة الحمل من بداية الحمل حتى الولادة.</span><span class="en">Pregnancy follow-up from early pregnancy through delivery.</span></li>
+            <li><span class="ar">السونار الرباعي (4D) التفصيلي ومتابعة نمو الجنين.</span><span class="en">Detailed 4D ultrasound and fetal growth follow-up.</span></li>
+            <li><span class="ar">الولادة الطبيعية والقيصرية.</span><span class="en">Vaginal and caesarean delivery.</span></li>
+            <li><span class="ar">متابعة ما بعد الولادة ورعاية الأم.</span><span class="en">Postpartum follow-up and maternal care.</span></li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="category-card">
+        <details>
+          <summary>
+            <div class="category-head">
+              <div class="category-icon">+</div>
+              <div class="head-copy"><h3><span class="ar">أمراض النساء</span><span class="en">Gynecology</span></h3><p><span class="ar">تشخيص وعلاج ومتابعة صحة المرأة</span><span class="en">Diagnosis, treatment and women's health follow-up</span></p><div class="more-hint"><span class="ar">اضغطي لمعرفة المزيد</span><span class="en">Tap to view more</span></div></div>
+              <span class="summary-arrow">⌄</span>
+            </div>
+          </summary>
+          <ul class="category-list">
+            <li><span class="ar">علاج اضطرابات الدورة الشهرية.</span><span class="en">Treatment of menstrual disorders.</span></li>
+            <li><span class="ar">علاج تكيسات المبايض وتحديد موعد الإباضة.</span><span class="en">PCOS management and ovulation timing.</span></li>
+            <li><span class="ar">علاج تأخر الإنجاب والحقن المجهري.</span><span class="en">Infertility treatment and IVF.</span></li>
+            <li><span class="ar">علاج هبوط الرحم وسلس البول.</span><span class="en">Management of uterine prolapse and urinary incontinence.</span></li>
+            <li><span class="ar">تشخيص وعلاج الالتهابات النسائية المتكررة.</span><span class="en">Diagnosis and treatment of recurrent gynecological infections.</span></li>
+            <li><span class="ar">وسائل منع الحمل: اللولب والكبسولة تحت الجلد وتركيب وإزالة الوسائل.</span><span class="en">Contraception: IUDs, implants, insertion and removal.</span></li>
+            <li><span class="ar">السونار المهبلي رباعي الأبعاد لتشخيص ومتابعة الأمراض النسائية.</span><span class="en">4D transvaginal ultrasound for gynecological assessment.</span></li>
+            <li><span class="ar">علاج الالتهابات النسائية المتكررة والالتهابات الجنسية.</span><span class="en">Management of recurrent and sexually transmitted infections.</span></li>
+            <li><span class="ar">مسحة عنق الرحم للكشف المبكر عن الأورام والفيروسات المعدية.</span><span class="en">Pap smear for early detection and infection screening.</span></li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="category-card">
+        <details>
+          <summary>
+            <div class="category-head">
+              <div class="category-icon">✦</div>
+              <div class="head-copy"><h3><span class="ar">التجميل النسائي</span><span class="en">Cosmetic Gynecology</span></h3><p><span class="ar">حلول جراحية وغير جراحية متخصصة</span><span class="en">Specialized surgical and non-surgical options</span></p><div class="more-hint"><span class="ar">اضغطي لمعرفة المزيد</span><span class="en">Tap to view more</span></div></div>
+              <span class="summary-arrow">⌄</span>
+            </div>
+          </summary>
+          <ul class="category-list">
+            <li><span class="ar">تجميل وتصغير الشفرات (Labiaplasty).</span><span class="en">Labiaplasty and labial reduction.</span></li>
+            <li><span class="ar">تضييق وشد المهبل جراحيًا وبدون جراحة.</span><span class="en">Surgical and non-surgical vaginal tightening.</span></li>
+            <li><span class="ar">تضييق المهبل بالليزر بعد الولادة.</span><span class="en">Postpartum vaginal laser tightening.</span></li>
+            <li><span class="ar">شد المهبل بخيوط ثلاثية الأبعاد.</span><span class="en">Three-dimensional vaginal lifting threads.</span></li>
+            <li><span class="ar">حقن الدهون الذاتية والفيلر للمنطقة الحساسة.</span><span class="en">Autologous fat and filler injections for the intimate area.</span></li>
+            <li><span class="ar">توريد وتفتيح المنطقة الحساسة.</span><span class="en">Intimate-area brightening and revitalization.</span></li>
+            <li><span class="ar">إزالة التصبغات والإسمرار بالليزر والتقنيات الحديثة.</span><span class="en">Laser and modern treatments for pigmentation and darkening.</span></li>
+            <li><span class="ar">حقن O-Shot و G-Shot لتحسين العلاقة الزوجية.</span><span class="en">O-Shot and G-Shot after appropriate medical assessment.</span></li>
+            <li><span class="ar">علاج ترهل وتشققات الجلد بعد الحمل والولادة.</span><span class="en">Treatment of postpartum skin laxity and stretch marks.</span></li>
+          </ul>
+        </details>
+      </div>
     </div>
   </div>
 </section>
@@ -485,14 +606,14 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
       <div class="floating two"><b>IVF</b><span><span class="ar">رعاية الخصوبة</span><span class="en">Fertility Care</span></span></div>
     </div>
     <div class="rtl-text">
-      <div class="kicker"><span class="ar">صحة المرأة</span><span class="en">WOMEN'S HEALTH</span></div>
-      <h2><span class="ar">رعاية تهتم بالتفاصيل التي تهمك</span><span class="en">Care focused on what matters to you</span></h2>
-      <p><span class="ar">من الفحص النسائي ومشكلات الدورة إلى وسائل منع الحمل والجفاف المهبلي والسلس البولي وعلاج ومتابعة HPV، يتم تقييم الحالة ووضع الخطة المناسبة.</span><span class="en">From gynecological examinations and menstrual concerns to contraception, vaginal dryness, urinary incontinence and HPV treatment and follow-up, each case is assessed individually.</span></p>
+      <div class="kicker"><span class="ar">رعاية متكاملة</span><span class="en">COMPREHENSIVE CARE</span></div>
+      <h2><span class="ar">من الحمل والولادة إلى صحة المرأة والتجميل النسائي</span><span class="en">From pregnancy and delivery to women's health and cosmetic gynecology</span></h2>
+      <p><span class="ar">يتم تقييم كل حالة بشكل فردي لتحديد الفحوصات والإجراء أو العلاج الأنسب، مع الاهتمام براحة وخصوصية كل سيدة.</span><span class="en">Every case is individually assessed to determine the most appropriate examination or treatment, with comfort and privacy at the center of care.</span></p>
       <div class="list">
-        <div class="list-item"><div class="check">✓</div><span class="ar">فحص ومتابعة صحة المرأة</span><span class="en">Women's health examination and follow-up</span></div>
-        <div class="list-item"><div class="check">✓</div><span class="ar">وسائل منع الحمل والاستشارات النسائية</span><span class="en">Contraception and gynecological consultation</span></div>
-        <div class="list-item"><div class="check">✓</div><span class="ar">الجفاف المهبلي والسلس البولي</span><span class="en">Vaginal dryness and urinary incontinence</span></div>
-        <div class="list-item"><div class="check">✓</div><span class="ar">علاج ومتابعة حالات HPV</span><span class="en">HPV treatment and follow-up</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">سونار رباعي الأبعاد ومتابعة نمو الجنين</span><span class="en">4D ultrasound and fetal growth follow-up</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">تأخر الإنجاب والحقن المجهري وتحديد الإباضة</span><span class="en">Infertility, IVF and ovulation timing</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">اضطرابات الدورة وتكيسات المبايض</span><span class="en">Menstrual disorders and PCOS</span></div>
+        <div class="list-item"><div class="check">✓</div><span class="ar">وسائل منع الحمل والسونار المهبلي 4D</span><span class="en">Contraception and 4D transvaginal ultrasound</span></div>
       </div>
     </div>
   </div>
@@ -502,18 +623,18 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
   <div class="container">
     <div class="section-title">
       <div class="kicker"><span class="ar">التجميل النسائي</span><span class="en">COSMETIC GYNECOLOGY</span></div>
-      <h2><span class="ar">صحة وتجميل المرأة بتقنيات متخصصة</span><span class="en">Specialized women's health & aesthetic care</span></h2>
-      <p><span class="ar">يتم اختيار الإجراء المناسب بعد التقييم الطبي للحالة.</span><span class="en">The appropriate treatment is selected following medical assessment.</span></p>
+      <h2><span class="ar">خيارات متخصصة لصحة وجمال المنطقة الحساسة</span><span class="en">Specialized intimate wellness & aesthetic care</span></h2>
+      <p><span class="ar">يشمل ذلك الإجراءات الجراحية والليزر والحقن والتقنيات غير الجراحية، حسب التقييم الطبي.</span><span class="en">Surgical, laser, injectable and non-surgical options are selected according to medical assessment.</span></p>
     </div>
     <div class="cosmetic-grid">
-      <div class="cos-card"><span class="mark">✦</span><b><span class="ar">الفيلر النسائي</span><span class="en">Female Filler</span></b><span><span class="ar">حقن تجميلية للمنطقة الحساسة</span><span class="en">Intimate-area aesthetic injections</span></span></div>
-      <div class="cos-card"><span class="mark">◌</span><b><span class="ar">الدهون الذاتية</span><span class="en">Autologous Fat</span></b><span><span class="ar">حسب التقييم الطبي</span><span class="en">Where clinically appropriate</span></span></div>
-      <div class="cos-card"><span class="mark">⌁</span><b><span class="ar">الليزر المهبلي</span><span class="en">Vaginal Laser</span></b><span><span class="ar">تقنيات ليزر متخصصة</span><span class="en">Specialized laser techniques</span></span></div>
-      <div class="cos-card"><span class="mark">◎</span><b>PRP</b><span><span class="ar">البلازما الغنية بالصفائح</span><span class="en">Platelet-rich plasma</span></span></div>
-      <div class="cos-card"><span class="mark">G</span><b>G-Shot</b><span><span class="ar">خدمة متخصصة بعد التقييم</span><span class="en">Following medical assessment</span></span></div>
-      <div class="cos-card"><span class="mark">O</span><b>O-Shot</b><span><span class="ar">خدمة متخصصة بعد التقييم</span><span class="en">Following medical assessment</span></span></div>
-      <div class="cos-card"><span class="mark">✧</span><b><span class="ar">الفراكشنال ليزر</span><span class="en">Fractional Laser</span></b><span><span class="ar">متاح بالعيادة</span><span class="en">Available at the clinic</span></span></div>
-      <div class="cos-card"><span class="mark">♡</span><b><span class="ar">صحة المنطقة الحساسة</span><span class="en">Intimate Wellness</span></b><span><span class="ar">الجفاف والاحتياجات التجميلية</span><span class="en">Dryness and aesthetic concerns</span></span></div>
+      <div class="cos-card"><span class="mark">✦</span><b><span class="ar">Labiaplasty</span><span class="en">Labiaplasty</span></b><span><span class="ar">تجميل وتصغير الشفرات</span><span class="en">Labial reduction</span></span></div>
+      <div class="cos-card"><span class="mark">⌁</span><b><span class="ar">تضييق المهبل</span><span class="en">Vaginal Tightening</span></b><span><span class="ar">جراحي وبدون جراحة</span><span class="en">Surgical & non-surgical</span></span></div>
+      <div class="cos-card"><span class="mark">◌</span><b><span class="ar">الليزر المهبلي</span><span class="en">Vaginal Laser</span></b><span><span class="ar">خصوصًا بعد الولادة</span><span class="en">Including postpartum care</span></span></div>
+      <div class="cos-card"><span class="mark">3D</span><b><span class="ar">خيوط ثلاثية الأبعاد</span><span class="en">3D Threads</span></b><span><span class="ar">لشد المهبل</span><span class="en">For vaginal lifting</span></span></div>
+      <div class="cos-card"><span class="mark">♡</span><b><span class="ar">الفيلر والدهون الذاتية</span><span class="en">Filler & Autologous Fat</span></b><span><span class="ar">للمنطقة الحساسة</span><span class="en">For the intimate area</span></span></div>
+      <div class="cos-card"><span class="mark">✧</span><b><span class="ar">تفتيح وتوريد المنطقة</span><span class="en">Brightening</span></b><span><span class="ar">ليزر وتقنيات حديثة</span><span class="en">Laser & modern techniques</span></span></div>
+      <div class="cos-card"><span class="mark">G/O</span><b><span class="ar">G-Shot & O-Shot</span><span class="en">G-Shot & O-Shot</span></b><span><span class="ar">بعد التقييم الطبي</span><span class="en">After medical assessment</span></span></div>
+      <div class="cos-card"><span class="mark">♡</span><b><span class="ar">ترهل وتشققات الجلد</span><span class="en">Skin Laxity & Stretch Marks</span></b><span><span class="ar">بعد الحمل والولادة</span><span class="en">After pregnancy & delivery</span></span></div>
     </div>
   </div>
 </section>
@@ -539,9 +660,15 @@ footer{padding:25px 0 90px;background:var(--cream);border-top:1px solid var(--li
     </div>
   </div>
 </section>
+
+<div class="floating-cta" aria-label="Quick contact">
+  <a class="float-btn float-book" href="#contact">📅 <span class="ar">احجزي الآن</span><span class="en">Book Now</span></a>
+  <a class="float-btn float-wa" href="https://wa.me/201220446628?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">💬 <span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
+  <button class="float-btn float-call" onclick="openCall()">☎ <span class="ar">اتصلي بنا</span><span class="en">Call Us</span></button>
+</div>
 </main>
 
-<footer>
+<footer id="page-footer">
   <div class="container footer">
     <span><span class="ar">د. منى عبد المقصود — نساء وتوليد وعقم وتجميل نسائي</span><span class="en">Dr. Mona Abdelmaksoud — Obstetrics, Gynecology, Infertility & Cosmetic Gynecology</span></span>
     <span>© <span id="year"></span></span>
@@ -601,6 +728,16 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
 document.querySelectorAll('a[href*="maps.app.goo.gl"]').forEach(a=>{
   a.addEventListener('click',()=>typeof gtag==='function'&&gtag('event','map_click',{event_category:'engagement',event_label:'Dr Mona'}));
 });
+
+// Keep the quick-contact buttons at the bottom-right while scrolling, then hide them at the page end.
+const floatingCta=document.querySelector('.floating-cta');
+const pageFooter=document.getElementById('page-footer');
+if(floatingCta && pageFooter){
+  const footerObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>floatingCta.classList.toggle('at-end',entry.isIntersecting));
+  },{threshold:0.08});
+  footerObserver.observe(pageFooter);
+}
 </script>
 </body>
 </html>
